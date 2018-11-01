@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SOUND CITY guitar repair shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sc.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="instafeed.min.js"></script>
+<!--AGGIUNGERE META TAG-->
+
+<script>
+  
+  $(document).ready(function(){
+
+      $(".w3-text-white").hide();
+      $(".w3-text-white").fadeIn(3000);
+
+
+  })
+</script>
+
+<script>
+  // smooth scrolling
+  $(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    //this.hash SIGNIFICA prendi il valore dell'attributo href del tag a... (href: hash reference)
+    if (this.hash !== "") {
+      
+      event.preventDefault();
+
+      
+      var hash = this.hash;//...mettilo in una variabile quindi ad es. se ho cliccato 
+                  //"CHI SIAMO", il valore di hash sara "#who"
+      
+
+  $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 800, function(){window.location.hash = hash;});
+            //.animate(parametri CSS sui quali lavorare, velocità, funz. OPZ. da eseguire a seguito dell'animazione)
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        
+    } // End if
+  });
+});
+</script>
+
+<!--<script>
+
+/*-----------CAROUSEL SCRIPT----------------------*/
+  $(document).ready(function(){
+
+      $("#instafeed img:gt(0)").hide();
+
+
+      setInterval(function(){
+
+        $("#instafeed :first-child").fadeOut(1000).next("img").fadeIn(1000).end().appendTo("#instafeed");
+
+      },2000);})
+</script>-->
+
+
+<style>
+
+@font-face {
+     font-family: atwriter;
+     src: url('atwriter.ttf'); }
+
+@font-face {
+     font-family: Dispence;
+     src: url('Dispence.otf'); }
+
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/header.jpg");
+    min-height: 75%;
+    height: 100vh;
+}
+.menu {
+    display: none;
+}
+
+p { text-align: center; }
+
+h5 span { font-family: "atwriter"; }
+
+div a { font-family: "atwriter"; }
+
+#instafeed {
+  width: 400px;
+  width: 100%;
+  height: 400px;
+}
+
+.carousel {
+  position: relative;
+  background-color: gray;
+}
+
+.carousel .slide {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.carousel .slide--active {
+  z-index: 1;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT ME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#what" class="w3-button w3-block w3-black">COSA FACCIO</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">DOVE SONO</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contact" class="w3-button w3-block w3-black">CONTATTI</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:110px; font-family: 'Dispence'; opacity: 0.8;">SOUND CITY</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+      <!-- About Container -->
+      <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px" id="about">
+          <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT ME</span></h5>
+          <p>Mi chiamo Enrico Crippa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          Mi chiamo Enrico Crippa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          Mi chiamo Enrico Crippa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          Mi chiamo Enrico Crippa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          Mi chiamo Enrico Crippa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </div>
+
+        <div class="w3-content" style="max-width:700px" id="what">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">COSA FACCIO</span></h5>
+            <!-----------CAROUSEL INSTAGRAM---------------->
+            <div id="instafeed" class="carousel"></div>
+          <p><strong>RESTAURO & MANTENIMENTO STRUMENTI MUSICALI:</strong>
+            set up, upgrades, refret, leveling, rewiring, electronics, touch up, finishing, crack // brace repair, customizzazioni, nut shaping, tuner installation, pickguard, hardware ...and much more!!!
+          </p>
+        </div>
+
+      <!-- Contact/Area Container -->
+        <div  class="w3-content" style="max-width:700px" id="where">
+          <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">DOVE SONO</span></h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.6064776856174!2d9.687365315433233!3d45.05320697909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4780dd5c895f8b23%3A0xf2ec7ad74e47ba75!2sSOUND+CITY%2C+Guitar+Repair+Shop%2C+Laboratorio+di+Liuteria!5e0!3m2!1sit!2sit!4v1535293819977" width="700" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <p>Sound City guitar repair shop si trova a Piacenza in Corso Giuseppe Garibaldi, 62</p>
+          <p><strong>NB! Per chi arriva in auto:</strong> il negozio si trova nel centro storico della città che è una ZTL: potrete munirvi di pass (presentando il libretto di circolazione del proprio autoveicolo) presso l'ufficio competente sito in Piazza Cittadella, 13. Il prezzo del pass è di 1€ e dura un giorno intero.</p>
+        </div>
+
+        <div  class="w3-content" style="max-width:700px" id="contact">
+          <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">CONTATTI</span></h5>
+          <p><a href="mailto: crippa.e@gmail.com">crippa.e AT gmail DOT com</a></p>
+          <p>339 39 06 514</p>
+          <p>0523 328389</p>
+
+        </div>
+      </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Made with love by <a href="mailto: dario.iosca@gmail.com" title="THE_SHELF" target="_blank">THE SHELF</a></p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+function createInstafeed(onImagesReady) {
+  // definisco il template di ogni immagine che instafeed trova
+  var template = '<div class="slide"><a href="{{link}}"><img src="{{image}}" /></a></div>'; 
+  // creo l'istanza di instafeed
+  return new Instafeed({
+                            get: 'user',
+                            target: 'instafeed',
+                            userId: '174352090',
+                            clientId: 'bf9c58934d034baa85018e7d39dba171',
+                            accessToken: '174352090.ba4c844.ff5998881ca04cd2ba143f58be274f0b',
+                            template: template,
+                            resolution: 'standard_resolution',
+                            after: onImagesReady//callback function called when images have been added to the page.
+                          });
+}
+
+function createCarousel(options) {
+  var selector = options.selector;
+  var carouselTime = options.timing || 2000;
+  var fadeTime = carouselTime / 2;
+
+  var carousel = {
+
+    //-----------------NEXT--------------------
+    next: function next() {
+      // il metodo next serve per andare alla slide successiva
+      // prendo la slide visibile, eseguo il fadeOut e prendo la slide subito dopo
+      // se vedi bene, non aspetto che il fadeOut sia terminato per prendere  l'elemento successivo.
+      // per eseguire un qualcosa al termine del fadeOut, dovevamo passargli una funzione dopo il fadeTime
+      var nextSlide = this.activeSlide.fadeOut(fadeTime).next();
+      console.log("Eseguito metodo next");
+      // una volta presa la slide successiva la passo alla funzione per settarla come slide attiva
+      this._setActiveSlide(nextSlide);
+    },
+
+
+    //-------------------RUN--------------------
+    run: function run() {
+      // il metodo run serve per avviare il carosello
+      // creo la variabile _this perchè altrimenti dentro l'interval il this non fa più riferimento
+      // all'oggetto del carosello essendo dentro una funzione.
+      var _this = this;
+      // salvo l'id dell'interval in modo da poterlo distruggere quando voglio eliminare il carosello
+      this.intervalId = setInterval(function () {
+        // ogni X secondi eseguo il metodo next
+        // qui il this farebbe riferimento alla funzione dichiarata dentro setInterval, non all'oggetto del carosello
+        // per questo ho usato _this.
+        // Si può evitare di fare questo hack utilizzando le arrow function (ES6).
+        _this.next();
+      }, carouselTime);
+      console.log("run");
+    },
+
+
+    //-------------DESTROY-------------------------
+    destroy: function destroy() {
+      // il metodo destroy serve per distruggere il carosello, eliminando l'interval
+      // e qualsiasi referenza del carosello
+      $(selector).removeClass('carousel');
+      clearInterval(this.intervalId);
+      console.log("destroy");
+    },
+
+
+    //-----------------SET ACTIVE SLIDE----------------------
+    _setActiveSlide: function _setActiveSlide(slide) {
+      // il metodo _setActiveSlide serve per settare una slide come "attiva"
+
+      var _this = this;  // -> vedi commento fatto sul metodo .run()
+
+      // qui prendo la slide che ho passato alla funzione, prendo l'elemento genitore
+      // e dal genitore prendo TUTTI i figli per rimuovere eventuali classi "slide--active".
+      slide.parent().children().each(function (child) {
+        $(this).removeClass('slide--active');
+        console.log("removeclass")
+      });
+      // a questo punto il carosello non ha nessuna slide settata come attiva,
+      // quindi posso far entrare la nuova slide passata come parametro con il fadeIn
+      slide.fadeIn(fadeTime, function () {
+        // quando il fadeIn è terminato aggiungo la classe "slide--active"
+        slide.addClass('slide--active');
+        // salvo la slide attiva così da ritrovarmela subito quando
+        // mi occorre (per esempio dentro il metodo .next())
+        _this.activeSlide = slide;
+        console.log("_setActiveSlide")
+      });
+    }
+  }//---------------------fine oggetto carousel------------------
+
+
+
+
+  // aggiungo la classe carosello al selettore che deve contenere lo slider
+  // così da poterlo stilizzare correttamente
+  $(selector).addClass('carousel');
+  // setto la prima slide che deve essere visibile
+  carousel._setActiveSlide($(selector + " .slide:first-child"));
+  // ritorno il carosello così da poter eseguire i suoi metodi dove e quando mi occorre
+  return carousel;
+}
+
+
+function onInstafeedImagesReady() {
+  // Quando le immagini di instafeed sono pronte
+  // creo l'istanza del carosello
+  console.log("onInstafeedImagesReady")
+  var carousel = createCarousel({
+    // il selettore dove creare il carosello
+    selector: '#instafeed',
+    // il tempo di sliding per ogni slide
+    timing: 2000
+  });
+  // avvio il carosello
+  carousel.run();
+}
+
+
+$(document).ready(function () {
+
+  // Creo l'istanza di instafeed e gli passo una funzione da eseguire quando le immagini sono pronte
+  var feed = createInstafeed(onInstafeedImagesReady);
+  // Eseguo instafeed
+  feed.run();
+
+})</script>
+
+
+
+
+
+
+
+</body>
+</html>
