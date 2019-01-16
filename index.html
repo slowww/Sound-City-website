@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
 <title>SOUND CITY guitar repair shop</title>
@@ -10,7 +10,7 @@
 <!--AGGIUNGERE META TAG-->
 
 <script>
-  
+
   $(document).ready(function(){
 
       $(".w3-text-white").hide();
@@ -28,18 +28,18 @@
     // Make sure this.hash has a value before overriding default behavior
     //this.hash SIGNIFICA prendi il valore dell'attributo href del tag a... (href: hash reference)
     if (this.hash !== "") {
-      
+
       event.preventDefault();
 
-      
-      var hash = this.hash;//...mettilo in una variabile quindi ad es. se ho cliccato 
+
+      var hash = this.hash;//...mettilo in una variabile quindi ad es. se ho cliccato
                   //"CHI SIAMO", il valore di hash sara "#who"
-      
+
 
   $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 800, function(){window.location.hash = hash;});
             //.animate(parametri CSS sui quali lavorare, velocità, funz. OPZ. da eseguire a seguito dell'animazione)
         // Add hash (#) to URL when done scrolling (default click behavior)
-        
+
     } // End if
   });
 });
@@ -221,7 +221,7 @@ div a { font-family: "atwriter"; }
 
 function createInstafeed(onImagesReady) {
   // definisco il template di ogni immagine che instafeed trova
-  var template = '<div class="slide"><a href="{{link}}"><img src="{{image}}" /></a></div>'; 
+  var template = '<div class="slide"><a href="{{link}}"><img src="{{image}}" /></a></div>';
   // creo l'istanza di instafeed
   return new Instafeed({
                             get: 'user',
